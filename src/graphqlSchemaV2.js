@@ -4,7 +4,7 @@ import {SchemaBuilder, LevelBuilder} from './common/graphql'
 
 const hasOwnProperty = Object.prototype.hasOwnProperty;
 
-import {missingArgument, invalidArgument} from './common/utils/arguments'
+import {missingArgument, invalidArgument} from './common/validation/index'
 
 export default oncePerServices(function (services = missingArgument('services')) {
 
