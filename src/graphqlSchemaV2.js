@@ -14,7 +14,8 @@ export default oncePerServices(function (services = missingArgument('services'))
     const resolvers = Object.create(null);
 
     await (new SchemaBuilder({
-      test: require('./services/test/graphql').default(services)
+      test: require('./services/test/graphql').default(services),
+      testTask: require('./services/testTask/graphql').default(services)
       
     }).build({typeDefs, resolvers}));
 
